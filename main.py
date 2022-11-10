@@ -130,3 +130,19 @@ def play(players, board):
     index = 1
     current_player = ""
     current_sign = ""
+
+    while True:
+        is_free_space = True
+        if index == 1:
+            current_player, current_sign = player_one, player_one_sign
+        else:
+            current_player, current_sign = player_two, player_two_sign
+
+        position = int(input(f"{current_player} choose a free position [1-9]: "))
+
+        if valid_position(position):
+            board, is_free_space = apply_move(position, board, current_sign)
+            if not is_free_space:
+                continue
+            else:
+                print_table(board, size_board)
