@@ -30,3 +30,13 @@ def is_win(board, sign):
             [board[0][2], board[1][1], board[2][0]],
         ]
     }
+
+    win = sign * 3
+
+    for key, value in possible_wins.items():
+        for x in value:
+            result = ''.join(str(i) for i in x)
+            if result == win:
+                return True
+
+    return False
