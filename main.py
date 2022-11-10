@@ -83,3 +83,9 @@ def apply_move(position, board, sign):
     else:
         board[row][col] = sign
         return board, True
+
+def valid_position(position):
+    if 1 <= position <= 9:
+        return True
+
+    return False
