@@ -75,3 +75,11 @@ def apply_move(position, board, sign):
         8: (2, 1),
         9: (2, 2),
     }
+
+    row, col = possible_moves[position]
+
+    if board[row][col] != None:
+        return board, False
+    else:
+        board[row][col] = sign
+        return board, True
