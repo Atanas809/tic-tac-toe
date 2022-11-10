@@ -162,3 +162,21 @@ def play(players, board):
             continue
 
         index += 1
+
+
+def read_players_data():
+    player_one = input("Player one name: ")
+    player_two = input("Player two name: ")
+
+    valid_signs = ['X', 'O']
+
+    player_one_sign = input(f"{player_one} would you like to play with 'X' or 'O'?: ").upper()
+
+    if player_one_sign not in valid_signs:
+        player_one_sign = input(f"{player_one} would you like to play with 'X' or 'O'?: ").upper()
+
+    player_two_sign = 'O' if player_one_sign == "X" else "X"
+
+    players_data = (player_one, player_one_sign), (player_two, player_two_sign)
+
+    return players_data
