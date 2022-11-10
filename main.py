@@ -52,3 +52,11 @@ def print_table(board, size):
                     current_row += f"|     "
                 else:
                     current_row += f"|     |"
+            else:
+                sign = board[row][col]
+                if index % 3 != 0:
+                    current_row += f"|  {sign}  "
+                else:
+                    current_row += f"|  {sign}  |"
+            index += 1
+        print(current_row)
