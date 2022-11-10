@@ -146,3 +146,19 @@ def play(players, board):
                 continue
             else:
                 print_table(board, size_board)
+
+            if is_win(board, current_sign):
+                print(f"{current_player} won!")
+                break
+            if is_draw(board):
+                print("It's a draw!")
+                break
+        else:
+            print("Please choose a valid position!")
+            continue
+
+        if index == 2:
+            index = 1
+            continue
+
+        index += 1
