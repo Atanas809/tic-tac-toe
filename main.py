@@ -180,3 +180,12 @@ def read_players_data():
     players_data = (player_one, player_one_sign), (player_two, player_two_sign)
 
     return players_data
+
+
+players_info = read_players_data()
+size_board = 3
+numeration_of_the_board(size_board)
+
+board = read_board(size_board)
+
+play(players_info, board)
