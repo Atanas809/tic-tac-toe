@@ -99,3 +99,21 @@ def read_board(size):
         matrix.append([None for _ in range(size)])
 
     return matrix
+
+
+def numeration_of_the_board(size):
+
+    print("This is the numeration of the board:")
+
+    matrix = []
+    index = 1
+
+    for row in range(size):
+        current_row = []
+        for col in range(size):
+            if index % 3 == 0:
+                current_row.append(f"|  {index}  |")
+            else:
+                current_row.append(f"|  {index} ")
+            index += 1
+        matrix.append(current_row)
