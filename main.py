@@ -89,3 +89,13 @@ def valid_position(position):
         return True
 
     return False
+
+
+def read_board(size):
+
+    matrix = []
+
+    for _ in range(size):
+        matrix.append([None for _ in range(size)])
+
+    return matrix
