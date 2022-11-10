@@ -40,3 +40,15 @@ def is_win(board, sign):
                 return True
 
     return False
+
+
+def print_table(board, size):
+    index = 1
+    for row in range(size):
+        current_row = ""
+        for col in range(size):
+            if board[row][col] == None:
+                if index % 3 != 0:
+                    current_row += f"|     "
+                else:
+                    current_row += f"|     |"
