@@ -117,3 +117,16 @@ def numeration_of_the_board(size):
                 current_row.append(f"|  {index} ")
             index += 1
         matrix.append(current_row)
+
+    for r in matrix:
+        print(' '.join(str(x) for x in r))
+
+
+def play(players, board):
+    player_one, player_one_sign = players[0][0], players[0][1]
+    player_two, player_two_sign = players[1][0], players[1][1]
+    print(f"{player_one} starts first!")
+
+    index = 1
+    current_player = ""
+    current_sign = ""
